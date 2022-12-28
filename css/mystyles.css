@@ -1,0 +1,274 @@
+html, body {
+  height: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  font-family: monospace;
+  background-color: #000000;
+}
+
+.content {
+  position: absolute;
+  top: 3vh;
+  bottom: 6vh;
+  left: 15vw;
+  right: 15vw;
+}
+
+#main {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background-color: #171717;
+  display: none;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url("../images/background.gif");
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+}
+
+.star {
+  position: absolute;
+  background-color: #f0a80d;
+  box-shadow: 0 0 10px 3px rgba(255, 255, 255, 0.5) inset;
+  border-radius: 50%;
+  transform: scale(1);
+  transform-style: preserve-3d;
+  background-size: 25% 25%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.pulse {
+  animation: pulse-star 0.3s linear 0s 1;
+}
+
+@keyframes pulse-star {
+  0% {
+    transform: scale(0.5);
+    box-shadow: 0 0 0 5px rgba(176, 232, 255, 0.7);
+  }
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 25px rgba(105, 220, 74, 0.05);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(176, 232, 255, 0);
+  }
+}
+.item {
+  position: absolute;
+  background: #0095DD;
+  left: 0;
+  top: 0;
+  border-radius: 10%;
+  transform: rotate(45deg);
+}
+.item .item-icon {
+  color: white;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%) rotate(-45deg);
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.bullet {
+  position: absolute;
+  border-radius: 40%;
+  opacity: 0.8;
+  background-size: 100% 100%;
+  background: rgba(99, 195, 231, 0.6);
+  -webkit-box-shadow: 0px 0px 5px 0px rgb(252, 161, 42);
+  -moz-box-shadow: 0px 0px 5px 0px rgb(252, 161, 42);
+  box-shadow: 0px 0px 5px 0px rgb(252, 161, 42);
+}
+
+.brick {
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.ship {
+  position: absolute;
+  transition: transform 0.3s;
+  border-radius: 40%;
+  transform-style: preserve-3d;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-origin: content-box;
+  background-image: url("../images/ship-sprite.png");
+  padding-top: 1%;
+  border-top: 2px solid rgba(0, 149, 221, 0.5);
+  -webkit-box-shadow: 0px -13px 15px rgba(0, 149, 221, 0.75);
+  -moz-box-shadow: 10px -13px 15px rgba(0, 149, 221, 0.75);
+  box-shadow: 0px -13px 15px rgba(0, 149, 221, 0.75);
+  animation: ship-animation 4s linear 0s infinite;
+}
+
+.down {
+  border-top: 2px solid rgba(221, 0, 18, 0.5);
+  -webkit-box-shadow: 0px -13px 15px rgba(221, 0, 18, 0.75);
+  -moz-box-shadow: 10px -13px 15px rgba(221, 0, 18, 0.75);
+  box-shadow: 0px -13px 15px rgba(221, 0, 18, 0.75);
+  animation-name: none;
+}
+
+#turret {
+  position: relative;
+  width: 17%;
+  height: auto;
+  margin-left: 15%;
+  margin-right: 15%;
+  animation: gun-animation 4s linear 0s infinite;
+}
+
+@keyframes ship-animation {
+  0% {
+    box-shadow: 0px -12px 14px rgba(0, 149, 221, 0.5);
+    background-position: 44% 48%;
+  }
+  50% {
+    box-shadow: 0px -17px 18px rgba(175, 227, 255, 0.9);
+    background-position: 56% 55%;
+  }
+  100% {
+    box-shadow: 0px -13px 15px rgba(0, 149, 221, 0.75);
+    background-position: 44% 48%;
+  }
+}
+@keyframes gun-animation {
+  0% {
+    margin-left: 14%;
+    margin-right: 18%;
+  }
+  50% {
+    margin-left: 18%;
+    margin-right: 14%;
+  }
+  100% {
+    margin-left: 14%;
+    margin-right: 18%;
+  }
+}
+#enemies {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  padding-top: 0%;
+  padding-left: 0%;
+  padding-right: 0%;
+}
+
+.boss {
+  position: absolute;
+  border-radius: 10%;
+  background-size: contain;
+  background-position: center;
+  background-repeat: space;
+  background-origin: content-box;
+}
+
+.saucer {
+  position: absolute;
+  border-radius: 25%;
+  background-size: contain;
+  background-position: center;
+  background-repeat: space;
+  background-origin: content-box;
+}
+
+.menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: white;
+  font-size: 4vw;
+  border: none;
+  display: none;
+}
+
+.menu_btn {
+  width: auto;
+  height: 100%;
+  font-size: 3vw;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+.level {
+  display: none;
+}
+.level .level_btn {
+  font-size: 1.5vw;
+  font-weight: 500;
+}
+
+#help_menu {
+  display: none;
+}
+#help_menu .key {
+  font-size: 1.5vw;
+  font-weight: 500;
+}
+#help_menu b {
+  font-size: 2vw;
+}
+
+.event_btn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: white;
+  font-size: 2vw;
+  border: none;
+  display: none;
+}
+
+#main_menu {
+  display: block;
+}
+
+#life {
+  position: absolute;
+  padding-left: 2%;
+  padding-top: 2%;
+  color: white;
+  font-size: 1.5vw;
+}
+
+#health {
+  position: absolute;
+  padding-right: 2%;
+  padding-top: 2%;
+  top: 0;
+  right: 0;
+  color: white;
+  font-size: 1.5vw;
+}
+
+#tips {
+  color: red;
+  font-size: 1.5vw;
+}
+
+/*# sourceMappingURL=mystyles.css.map */

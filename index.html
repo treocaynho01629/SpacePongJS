@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ping Pong - 19130248 - Hà Đức Trọng</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/mystyles.css">
+</head>
+<body>
+    <!--Main Game>-->
+    <div class="content">
+        <div class="container g-0" id="main">
+            <div class="container g-0" id="enemies"></div>
+            <div class="star" id="star-0"></div>
+            <div id="ship" class="ship"></div>
+            <p id="life"></p>
+            <p id="health"></p>
+        </div>
+        <p id="tips"></p>
+    </div>
+
+    <!--Main menu-->
+    <div class="menu" id="main_menu">
+        <p>PING PONG SPACE BATTLE</p>
+        <ul class="nav flex-column">
+            <li class="nav-item">
+                <button class="menu_btn btn btn-success" id="start_btn">Start</button>
+            </li>
+            <li class="nav-item">
+                <button class="menu_btn btn btn-warning" id="choose_btn">Choose Level</button>
+            </li>
+            <li class="nav-item level">
+                <button class="level_btn btn btn-warning" id="level1">1</button>
+                <button class="level_btn btn btn-warning" id="level2">2</button>
+                <button class="level_btn btn btn-warning" id="level3">3</button>
+                <button class="level_btn btn btn-warning" id="level4">4</button>
+                <button class="level_btn btn btn-warning" id="level5">5</button>
+                <button class="level_btn btn btn-warning" id="level6">6</button>
+            </li>
+            <li class="nav-item">
+                <button class="menu_btn btn btn-light" id="help_btn">Controls</button>
+            </li>
+        </ul>
+    </div>
+
+    <!--Help menu-->
+    <div class="menu" id="help_menu">
+        <p>KEYBINDS</p>
+        <ul class="nav flex-column">
+            <li class="nav-item">
+                <button class="key btn btn-outline-light" disabled><</button>
+                <button class="key btn btn-outline-light" disabled>></button>
+                <b>or</b>
+                <button class="key btn btn-outline-light" disabled>A</button>
+                <button class="key btn btn-outline-light" disabled>D</button>
+                <b>or Mouse: </b>
+                <b>Move left/right</b>
+            </li>
+            <li class="nav-item">
+                <button class="key btn btn-outline-light" disabled>Shift</button>
+                <b>Speed boost</b>
+            </li>
+            <li class="nav-item">
+                <button class="key btn btn-outline-light" disabled>Space</button>
+                <b>Launch star</b>
+            </li>
+            <p>DEBUG</p>
+            <li class="nav-item">
+                <button class="key btn btn-outline-light" disabled>Ctrl</button>
+                <b>Move star with mouse</b>
+            </li>
+            <li class="nav-item">
+                <button class="key btn btn-outline-light" disabled>Q</button>
+                <b>+</b>
+                <button class="key btn btn-outline-light" disabled>P</button>
+                <b>Skip</b>
+            </li>
+            <li class="nav-item">
+                <button class="key btn btn-outline-light" disabled>Q</button>
+                <b>+</b>
+                <button class="key btn btn-outline-light" disabled>O</button>
+                <b>Godmode</b>
+            </li>
+            <li class="nav-item">
+                <button class="key btn btn-outline-light" disabled>Q</button>
+                <b>+</b>
+                <button class="key btn btn-outline-light" disabled>L</button>
+                <b>Spawn 10 stars</b>
+            </li>
+            <li class="nav-item">
+                <button class="key btn btn-outline-light" disabled>Q</button>
+                <b>+</b>
+                <button class="key btn btn-outline-light" disabled>Y</button>
+                <b>Unlock all levels</b>
+            </li>
+            <li class="nav-item">
+                <button class="key btn btn-outline-light" disabled>Q</button>
+                <b>+</b>
+                <button class="key btn btn-outline-light" disabled>R</button>
+                <b>Remove save data</b>
+            </li>
+        </ul>
+    </div>
+
+    <!--Pause menu-->
+    <div class="menu" id="pause">
+        <p>PAUSED</p>
+        <ul class="nav flex-column">
+            <li class="nav-item">
+                <button class="menu_btn btn btn-success" id="resume_btn">Resume</button>
+            </li>
+            <li class="nav-item">
+                <button class="menu_btn btn btn-warning" id="restart_btn">Restart Level</button>
+            </li>
+            <li class="nav-item">
+                <button class="menu_btn btn btn-danger" id="quit_btn">Save & quit</button>
+            </li>
+        </ul>
+    </div>
+
+    <!--Event menu-->
+    <button class="event_btn" id="event"></button>
+
+    <!--Script-->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/Vector.js"></script>
+    <script src="js/Brick.js"></script>
+    <script src="js/GameLevel.js"></script>
+    <script src="js/Star.js"></script>
+    <script src="js/Ship.js"></script>
+    <script src="js/Boss.js"></script>
+    <script src="js/Saucer.js"></script>
+    <script src="js/Item.js"></script>
+    <script src="js/Bullet.js"></script>
+    <script src="js/Functions.js"></script>
+    <script src="js/TestScript.js"></script>
+</body>
+</html>
